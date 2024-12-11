@@ -1,3 +1,5 @@
+# run command:
+# uvicorn app.server:app --reload
 from fastapi import FastAPI
 from pydantic import BaseModel
 import numpy as np
@@ -5,7 +7,7 @@ import onnxruntime as ort
 
 
 app = FastAPI()
-ort_session = ort.InferenceSession("../model/my_model.onnx")
+ort_session = ort.InferenceSession("app/my_model.onnx")
 CLASS_LABELS = ["setosa", "versicolor", "virginica"]
 
 
