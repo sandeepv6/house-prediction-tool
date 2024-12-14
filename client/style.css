@@ -21,6 +21,10 @@ h3{
     font-size: 18pt;
 }
 
+option{
+    font-weight: bold;
+}
+
 .input-group{
     padding: 5px;
 }
