@@ -14,6 +14,7 @@ body{
 #info{
     background-color: rgba(241, 236, 236, 0.368);
     height: 900px;
+    text-align: center;
 }
 
 #info-output{
@@ -28,6 +29,7 @@ body{
 
 .long-lat{
     display: flex;
+    margin-left: 30%;
 }
 
 #longitude, #latitude{
