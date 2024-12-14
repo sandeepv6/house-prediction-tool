@@ -7,7 +7,7 @@ body{
     background-size: cover;
 
 }
-.select-group{
+.input-group{
     padding: 5px;
 }
 
@@ -24,4 +24,12 @@ body{
     color: aquamarine;
     background-color: white;
     margin-left: 30px;
+}
+
+.long-lat{
+    display: flex;
+}
+
+#longitude, #latitude{
+    width: 100px
 }

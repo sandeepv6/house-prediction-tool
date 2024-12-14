@@ -12,30 +12,61 @@
         
         <div id="info">
             <h3>Please enter housing infomation</h3>
-            <div id="selections">
-                <div class="select-group">
-                    <label for="bed-secetion">Number of beds:</label>
+            <div class="inputs">
+                <div class="input-group">
+                    <label for="bed-selection">Number of beds:</label>
                     <select name="bed-selection" id="bed-selection" class="options">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6+</option>
                     </select>
                 </div>
                 
-                <div class="select-group">
-                    <label for="bath-secetion">Number of baths:</label>
+                <div class="input-group">
+                    <label for="bath-selection">Number of baths:</label>
                     <select name="bath-selection" id="bath-selection" class="options">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6+</option>
                     </select>
                 </div>
+
+                <div class="input-group">
+                    <label for="square-footage">Square Footage:</label>
+                    <input id="square-footage" type="number">
+                </div>
+
+                <div class="input-group">
+                    <label for="city-selection">City:</label>
+                    <input id="city" type="text">
+                </div>
                
-                <div class="select-group">
-                    <label for="state-selection">Province:</label>
+                <div class="input-group">
+                    <label for="state-selection">State:</label>
                     <input id="state" type="text">
+                </div>
+
+                <div class="input-group">
+                    <label for="zip-selection">ZIP Code:</label>
+                    <input id="zip" type="text">
+                </div>
+
+                <div class="long-lat">
+                    <div class="input-group">
+                        <label for="longitude">Longitude:</label>
+                        <input id="longitude" type="number">
+                    </div>
+    
+                    <div class="input-group">
+                        <label for="latitute">ZIP Code:</label>
+                        <input id="latitude" type="number">
+                    </div>
                 </div>
             </div>
             <br>
