@@ -4,3 +4,4 @@ onnxruntime
 numpy
 joblib
 geopy
+scikit-learn
