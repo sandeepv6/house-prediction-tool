@@ -18,15 +18,15 @@ document.getElementById("submit").addEventListener("click", async function (even
 
     else{
             // send data to API
-    const inputData = {
-        num_bed: parseInt(num_bed),
-        num_bath: parseInt(num_bath),
-        acre_lot: parseFloat(lot_size),
-        house_size: parseFloat(square_footage),
-        address: address,
-        city: city,
-        state: state,
-        zip_code: zip_code
+        const inputData = {
+            num_bed: parseInt(num_bed),
+            num_bath: parseInt(num_bath),
+            acre_lot: parseFloat(lot_size),
+            house_size: parseFloat(square_footage),
+            address: address,
+            city: city,
+            state: state,
+            zip_code: zip_code
     };
 
     try {
