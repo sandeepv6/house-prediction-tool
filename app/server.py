@@ -2,6 +2,7 @@
 # uvicorn app.server:app --reload
 from fastapi import FastAPI
 from pydantic import BaseModel
+from geopy.geocoders import Nominatim
 import numpy as np
 import onnxruntime as ort
 
