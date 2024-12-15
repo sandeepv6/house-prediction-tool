@@ -69,3 +69,7 @@ button:hover{
 #longitude, #latitude{
     width: 100px
 }
+
+.ending{
+    margin-left: 3px;
+}
