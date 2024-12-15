@@ -12,7 +12,6 @@ document.getElementById("submit").addEventListener("click", async function (even
     const zip_code = document.getElementById("zip").value;
 
     // Make sure inputs are valid
-    console.log(num_bed)
     if (num_bed == "Select Beds..." || num_bath == "Select Baths..." || square_footage == "" || lot_size == "" || city == "" || zip_code == "" || state == "" || address == ""){
         alert("At least one field box is not entered");
     }
@@ -39,26 +38,29 @@ document.getElementById("submit").addEventListener("click", async function (even
             body: JSON.stringify(inputData)
         });
 
-        // check for a good response
+        // Check for a good response
         if (response.ok) {
             const data = await response.json();
 
             // Display the prediction result in the output div
             const resultDiv = document.getElementById("output");
             if (data.error) {
-                resultDiv.innerHTML = `<strong>Error:</strong> ${data.error}`;
-            } else {
-                resultDiv.innerHTML = `
-                    <strong>Predicted Price (Normalized):</strong> $${data.prediction}<br>
-                    <strong>Predicted Price (Original):</strong> $${data.price}
-                `;
+                let result = `<strong>Error:</strong> ${data.error}`;
+                resultDiv.innerHTML = result;
+            } 
+            else {
+                let price = Intl.NumberFormat().format(data.price)
+                let result = `<strong>Predicted Price:</strong> $${price}`;
+                resultDiv.innerHTML = result;
             }
-        } else {
-            throw new Error("Failed to fetch data from server");
+        } 
+        else {
+            throw new Error("Unable to predict price given input data");
         }
     } 
+
     catch (error) {
         console.error("Error:", error);
-        document.getElementById("output").innerHTML = `<strong>Error:</strong> Unable to fetch data from server.`;
+        document.getElementById("output").innerHTML = '<strong>Error:</strong> Unable to fetch data from server.';
     }
 }});
