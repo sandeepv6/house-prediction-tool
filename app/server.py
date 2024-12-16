@@ -8,17 +8,8 @@ import onnxruntime as ort
 from fastapi import FastAPI
 from geopy.geocoders import Nominatim
 from pydantic import BaseModel
-from starlette.middleware.cors import CORSMiddleware
 
 app = FastAPI()
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["http://127.0.0.1:5500"],  # Allows only this frontend server to access your API
-    allow_credentials=True,
-    allow_methods=["*"],  # Allows all HTTP methods (GET, POST, etc.)
-    allow_headers=["*"],  # Allows all headers
-)
 
 ort_session = ort.InferenceSession("app/my_model.onnx")
 
