@@ -1,13 +1,14 @@
 # run command:
 # uvicorn app.server:app --reload
+import math
+
 import joblib
 import numpy as np
 import onnxruntime as ort
 from fastapi import FastAPI
-from pydantic import BaseModel
 from geopy.geocoders import Nominatim
+from pydantic import BaseModel
 from starlette.middleware.cors import CORSMiddleware
-import math
 
 app = FastAPI()
 
